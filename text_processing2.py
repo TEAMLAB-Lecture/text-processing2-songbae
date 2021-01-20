@@ -38,7 +38,7 @@ def digits_to_words(input_string):
             elif i=='3':
                 temp+=" "+'three'
             elif i=='4':
-                temp+=" "+"fout"
+                temp+=" "+"four"
             elif i=='5':
                 temp+=" "+'five'
 
