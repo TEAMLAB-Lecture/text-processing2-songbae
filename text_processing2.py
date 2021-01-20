@@ -28,8 +28,32 @@ def digits_to_words(input_string):
             >>> tp2.digits_to_words(digits_str2)
             'three one four one five'
     """
-    digit_string = None
-    return digit_string
+    temp=str()
+    for i in input_string:
+        if ord(i)>=48 and ord(i)<=57:
+            if i=='1':
+                temp+=" "+'one'
+            elif i=='2':
+                temp+=" "+'two'
+            elif i=='3':
+                temp+=" "+'three'
+            elif i=='4':
+                temp+=" "+"four"
+            elif i=='5':
+                temp+=" "+'five'
+
+            elif i=='6':
+                temp+=" "+'six'
+            elif i=='7':
+                temp+=" "+'seven'
+            elif i=='8':
+                temp+=' '+'eight'
+            elif i=='9':
+                temp+=" "+'nine'
+            else :
+                temp+=" "+'zero'
+    temp=temp.strip()
+    return temp
 
 
 """
@@ -64,5 +88,23 @@ def to_camel_case(underscore_str):
             >>> tp2.to_camel_case(underscore_str3)
             "alreadyCamel"
     """
-    camelcase_str = None
-    return camelcase_str
+    temp=str()
+    num =underscore_str.find('_')
+    if num==-1:
+        return underscore_str
+    x=underscore_str.lower()
+    now =x.split('_')
+    cnt=0
+    for i in now:
+        if i=="":
+            continue
+        if cnt>0:
+            temp+=i[0].upper()+i[1:]
+        else :
+            cnt+=1
+            temp+=i
+    return temp
+
+
+print( to_camel_case('alreadeyCamel'))
+print(digits_to_words('Zip Code: 19104'))
