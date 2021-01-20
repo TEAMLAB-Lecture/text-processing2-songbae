@@ -89,9 +89,22 @@ def to_camel_case(underscore_str):
             "alreadyCamel"
     """
     temp=str()
+    num =underscore_str.find('_')
+    if num==-1:
+        return underscore_str
     x=underscore_str.lower()
-    for i in range(len(underscore_str)):
-        if x[i]=='-':
-            if i!=len(underscore_str)-1:
-                if ord(x[i+1])==
-    return camelcase_str
+    now =x.split('_')
+    cnt=0
+    for i in now:
+        if i=="":
+            continue
+        if cnt>0:
+            temp+=i[0].upper()+i[1:]
+        else :
+            cnt+=1
+            temp+=i
+    return temp
+
+
+print( to_camel_case('alreadeyCamel'))
+
