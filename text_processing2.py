@@ -30,7 +30,7 @@ def digits_to_words(input_string):
     """
     temp=str()
     for i in input_string:
-        if ord(i)>=47 and ord(i)<=56:
+        if ord(i)>=48 and ord(i)<=57:
             if i=='1':
                 temp+=" "+'one'
             elif i=='2':
@@ -107,4 +107,4 @@ def to_camel_case(underscore_str):
 
 
 print( to_camel_case('alreadeyCamel'))
-
+print(digits_to_words('Zip Code: 19104'))
