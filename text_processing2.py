@@ -29,7 +29,7 @@ def digits_to_words(input_string):
             'three one four one five'
     """
     temp=str()
-    for i in input:
+    for i in input_string:
         if ord(i)>=47 and ord(i)<=56:
             if i=='1':
                 temp+=" "+'one'
